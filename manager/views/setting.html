@@ -27,7 +27,7 @@
 
                     <form class="form-horizontal" role="form">
                         <div class="form-group">
-                            <label for="tencongty" class="col-sm-2 control-label">Tên công ty :</label>
+                            <label for="tencongty" class="col-sm-2 control-label">Company name:</label>
 
                             <div class="col-sm-6" ng-hide="enabale">
                                 <input type="text" class="form-control" id="tencongty" ng-model="data.companyName">
@@ -38,7 +38,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="diagchi" class="col-sm-2 control-label">Địa chỉ :</label>
+                            <label for="diagchi" class="col-sm-2 control-label">Address :</label>
 
                             <div class="col-sm-6" ng-hide="enabale">
                                 <input type="text" class="form-control" id="diagchi" ng-model="data.address">
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="tenfax" class="col-sm-2 control-label">Tên Fax :</label>
+                            <label for="tenfax" class="col-sm-2 control-label">Fax :</label>
 
                             <div class="col-sm-6" ng-hide="enabale">
                                 <input type="text" class="form-control" id="tenfax" ng-model="data.fax">
@@ -74,7 +74,7 @@
             </div>
             <div class="row">
                 <div class="form-group description">
-                    <label for="description" class="col-sm-4 control-label">Giới thiệu công ty</label>
+                    <label for="description" class="col-sm-4 control-label">About the company</label>
 
                     <div class="col-sm-6" ng-hide="enabale">
                         <input type="text" class="form-control" id="description"
@@ -86,11 +86,11 @@
             </div>
         </div>
         <button ng-show="enabale" ng-click="change()" type="button" class="btn btn-primary">
-          <i class="glyphicon glyphicon-edit"></i> Sửa thông tin
+          <i class="glyphicon glyphicon-edit"></i> Edit
         </button>
 
         <button ng-hide="enabale" ng-click="update(data)" type="button" class="btn btn-primary">
-          <i class="glyphicon glyphicon-edit"></i> Cập nhật
+          <i class="glyphicon glyphicon-edit"></i> Update
         </button>
 
         <button ng-hide="enabale" ng-click="cancelEdit()" type="button" class="btn btn-default">
@@ -98,7 +98,7 @@
         </button>
 
 
-        <button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-lock"></i> Trang Maps
+        <button type="button" class="btn btn-danger"><i class="glyphicon glyphicon-lock"></i> Maps Page
         </button>
     </div>
 

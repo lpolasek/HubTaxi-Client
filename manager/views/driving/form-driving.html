@@ -3,56 +3,56 @@
         <div class="col-md-6">
             <form class="form-horizontal" role="form" name="addDriving">
                 <div class="form-group">
-                    <label for="tendangnhap" class="col-sm-3 control-label">Tên đăng nhập</label>
+                    <label for="tendangnhap" class="col-sm-3 control-label">Username</label>
 
                     <div class="col-sm-9">
                         <input type="text" class="form-control" id="tendangnhap" ng-model="driving.username"
-                               placeholder="Nhập tên đăng nhập" required>
+                               placeholder="Enter username" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="phone" class="col-sm-3 control-label">Số điện thoại</label>
+                    <label for="phone" class="col-sm-3 control-label">Phone number</label>
 
                     <div class="col-sm-9">
                         <input type="tel" class="form-control" id="phone" ng-model="driving.phone"
-                               placeholder="Nhập số điện thoại" required>
+                               placeholder="Enter phone number" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="fullname" class="col-sm-3 control-label">Tên hiển thị</label>
+                    <label for="fullname" class="col-sm-3 control-label">Full name</label>
 
                     <div class="col-sm-9">
                         <input type="text" class="form-control" id="fullname" ng-model="driving.fullname"
-                               placeholder="Nhập tên hiện thị" required>
+                               placeholder="Enter full name" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="birthday" class="col-sm-3 control-label">Ngày sinh</label>
+                    <label for="birthday" class="col-sm-3 control-label">Birthday</label>
 
                     <div class="col-sm-9">
                         <input type="date" class="form-control" id="birthday" ng-model="driving.birthday"
-                               placeholder="Nhập ngày sinh" required>
+                               placeholder="Enter birthday" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="location" class="col-sm-3 control-label">Nơi sinh</label>
+                    <label for="location" class="col-sm-3 control-label">Address</label>
 
                     <div class="col-sm-9">
                         <input type="text" class="form-control" id="location" ng-model="driving.location"
-                               placeholder="Nhập nơi sinh" required>
+                               placeholder="Enter address" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="des" class="col-sm-3 control-label">Mô tả ngắn</label>
+                    <label for="des" class="col-sm-3 control-label">Description</label>
 
                     <div class="col-sm-9">
                         <input type="text" class="form-control" id="des" ng-model="driving.bio"
-                               placeholder="Nhập mô tả ngắn" required>
+                               placeholder="Enter description" required>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Loại xe</label>
+                    <label class="col-sm-3 control-label">Car model</label>
 
                     <div class="col-sm-9">
                         <select ng-change="findSeatNum(driving.type)" ng-model="driving.type"
@@ -62,18 +62,18 @@
 
                 </div>
                 <div class="form-group" ng-show="checkSeatShow">
-                    <p style="text-indent: 150px;"> Xe {{CarSeatNum}} Chỗ</p>
+                    <p style="text-indent: 150px;"> {{CarSeatNum}} seats vehicle </p>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1" class="col-sm-3 control-label">Mật khẩu</label>
+                    <label for="exampleInputPassword1" class="col-sm-3 control-label">Password</label>
 
                     <div class="col-sm-9">
                         <input type="password" class="form-control" id="exampleInputPassword1"
-                               ng-model="driving.password" placeholder="Nhập mật khẩu" required>
+                               ng-model="driving.password" placeholder="Enter password" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-sm-3 control-label">Chọn ảnh đại diện</label>
+                    <label class="col-sm-3 control-label">Choose your avatar</label>
 
                     <div class="col-sm-9">
                         <input class="form-control" type="file" id="exampleInputFile"
@@ -84,15 +84,15 @@
                     <div class="col-sm-offset-2 col-sm-10">
                         <div class="checkbox">
                             <label>
-                                <input checked="checked" type="checkbox"> Cho phép hoạt động
+                                <input checked="checked" type="checkbox"> Allow active
                             </label>
                         </div>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <button ng-click="createDriving(driving)" class="btn btn-success"> Thêm mới</button>
-                        <button class="btn btn-primary" ng-click="driving = {}"> Nhập lại</button>
+                        <button ng-click="createDriving(driving)" class="btn btn-success"> Add new</button>
+                        <button class="btn btn-primary" ng-click="driving = {}"> Clean</button>
                     </div>
                 </div>
 

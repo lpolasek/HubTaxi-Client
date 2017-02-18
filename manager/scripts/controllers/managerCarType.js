@@ -11,13 +11,13 @@ angular.module('itaxiManagerApp')
         $scope.activeForm = 0;
 
         $scope.dataType = {};
-        $scope.selectType = 'Tất cả xe';
+        $scope.selectType = 'All vehicles';
         var dataTypeCar;
         $scope.chooseType = function (typeCar) {
-            if ('4 Chỗ' == typeCar) {
+            if ('4 seats' == typeCar.toLowerCase()) {
                 $scope.loadSearch(4);
             }
-            else if ('7 Chỗ' == typeCar) {
+            else if ('7 seats' == typeCar.toLowerCase()) {
                 $scope.loadSearch(7);
             } else {
                 $scope.listDriverTypes = dataTypeCar;
@@ -60,26 +60,26 @@ angular.module('itaxiManagerApp')
 
             itemData.save(function (err, resp) {
                 if (!err) {
-                    toastr.success('Thêm mới thành công!');
+                    toastr.success('Success adding new vehicle!');
                     $scope.listDriverTypes.push(itemData);
                     appDataStore.DriverTypes.add(itemData);
                     $scope.back();
                 } else {
-                    toastr.error('Lỗi thêm mới');
+                    toastr.error('Failed to add a new vehicle');
                 }
             })
         };
         $scope.deleteDrivertype = function (item, index) {
             console.log('item delete : ', item, index);
 
-            if (window.confirm('Bạn có muốn xóa tài xế : ' + item.username + ' hay không?')) {
+            if (window.confirm('Do you want to delete the driver ' + item.username + ' ?')) {
                 item.destroy(function (err, result) {
                     if (!err) {
-                        toastr.success('Xóa lái xe thành công!');
+                        toastr.success('Success deleting driver!');
                         $scope.DriverTypes.splice(index, 1);
                         appDataStore.DriverTypes.remove(item);
                     } else {
-                        toastr.error('Lỗi xóa tài khoản');
+                        toastr.error('Failed to delete driver!');
                     }
                 })
             }

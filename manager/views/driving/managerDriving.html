@@ -1,21 +1,21 @@
 
 
 <!------
-    Template quản lý
+    Template manage
 ------->
 
 <div class="title-content-post">
     <ol class="breadcrumb pull-left">
         <li><a href="#">{{getApp.name}}</a></li>
-        <li><a href="#">Quản lý lái xe</a></li>
-        <li><a href="#">Danh sách lái xe</a></li>
-        <li class="active"><a href="#">Danh sách lái xe</a></li>
-        <li class="active">Thông tin lái xe</li>
+        <li><a href="#">Manage Drivers</a></li>
+        <li><a href="#">Drivers list</a></li>
+        <li class="active"><a href="#">Drivers list</a></li>
+        <li class="active">Driver information</li>
     </ol>
     <div class="pull-right" ng-show="activeForm == 1">
         <button type="button" class="btn btn-default" ng-click="back()"><i
                 class="glyphicon glyphicon-chevron-left"></i>
-            Quay lại
+           Back 
         </button>
     </div>
 </div>
@@ -26,9 +26,9 @@
                 <div class="col-md-4">
                     <div class="sort-search">
                         <select ng-model="selectSearch" ng-change="select(selectSearch)" class="form-control">
-                            <option>Tìm kiếm Kiếm theo tên</option>
-                            <option>Tìm kiếm Kiếm theo số chỗ</option>
-                            <option>Tìm kiếm theo Xe</option>
+                            <option>Search by name</option>
+                            <option>Search by seats</option>
+                            <option>Search by vehicle</option>
                         </select>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                     <div class="sort-search">
                         <select ng-change="selectCar(myCheckCar)" class="form-control" ng-model="myCheckCar"
                                 ng-options="list.carMarker for list in listDriverTypes">
-                            <option value="">Tất cả xe</option>
+                            <option value="">All vehicles</option>
                         </select>
                     </div>
                 </div>
@@ -45,16 +45,16 @@
                     <div class="sort-search">
                         <select ng-model="selectSearchSeatNum" ng-change="selectSeat(selectSearchSeatNum)"
                                 class="form-control">
-                            <option selected>Tất cả</option>
-                            <option>4 Chỗ</option>
-                            <option>7 Chỗ</option>
+                            <option selected>All</option>
+                            <option>4 Seats</option>
+                            <option>7 Seats</option>
                         </select>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="input-group input-search">
                         <i class="fa fa-search"></i>
-                        <input type="text" class="form-control" placeholder="Tìm kiếm" ng-model="search">
+                        <input type="text" class="form-control" placeholder="Search" ng-model="search">
                     </div>
 
                 </div>
@@ -66,7 +66,7 @@
         <div class="col-md-2">
             <div class="add-new-item">
                 <button type="button" class="btn btn-primary pull-right" ng-click="activeForm = 1">
-                  <i class="glyphicon glyphicon-plus"></i> Thêm mới
+                  <i class="glyphicon glyphicon-plus"></i> Add new
                 </button>
             </div>
         </div>
@@ -78,13 +78,13 @@
                 <table class="table table-post">
                     <thead>
                     <tr>
-                        <th>Ảnh</th>
-                        <th>Họ và Tên</th>
-                        <th>Đánh giá</th>
-                        <th>Điện thoại</th>
-                        <th>Kiểu xe</th>
-                        <th>Số chỗ</th>
-                        <th>Chức năng</th>
+                        <th>Picture</th>
+                        <th>First and Last Names</th>
+                        <th>Like</th>
+                        <th>Phone</th>
+                        <th>Models</th>
+                        <th>Seats</th>
+                        <th>Function</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -102,8 +102,8 @@
                         <td ng-click="gotoPage('main.detailDriving',{id : data._id})">{{data.phone}}</td>
                         <td ng-click="gotoPage('main.detailDriving',{id : data._id})">{{data.type.carMarker}}</td>
                         <td ng-click="gotoPage('main.detailDriving',{id : data._id})"> {{data.type.seatNum}}</td>
-                        <td><a ng-click="deleteDriving(data,$index)"> Xóa </a> | <a
-                                ng-click="gotoPage('main.detailDriving',{id : data._id})"> Sửa </a></td>
+                        <td><a ng-click="deleteDriving(data,$index)"> Delete </a> | <a
+                                ng-click="gotoPage('main.detailDriving',{id : data._id})"> Modify </a></td>
                     </tr>
 
                     </tbody>

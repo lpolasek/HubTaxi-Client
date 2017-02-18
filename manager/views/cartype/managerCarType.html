@@ -1,10 +1,10 @@
 <div class="title-content-post">
     <ol class="breadcrumb pull-left">
         <li><a href="#">{{getApp.name}}</a></li>
-        <li><a href="#">Quản lý loại xe</a></li>
-        <li ng-show="activeForm == 1"><a href="#" >Danh sách loại xe</a></li>
-        <li class="active" ng-show="activeForm == 0">Danh sách loại xe</li>
-        <li class="active" ng-show="activeForm == 1">Thông tin {{data.carMarker}}</li>
+        <li><a href="#">Manage vehicles</a></li>
+        <li ng-show="activeForm == 1"><a href="#" >Vehicles list</a></li>
+        <li class="active" ng-show="activeForm == 0">Vehicles list</li>
+        <li class="active" ng-show="activeForm == 1">{{data.carMarker}} information</li>
     </ol>
 </div>
 <div class="content-post" ng-show="activeForm == 0">
@@ -12,23 +12,23 @@
         <div class="col-md-3">
             <div class="input-group input-search">
                 <i class="fa fa-search"></i>
-                <input type="text" class="form-control" placeholder="Tìm kiếm" ng-model="search">
+                <input type="text" class="form-control" placeholder="Search" ng-model="search">
             </div>
 
         </div>
         <div class="col-md-3">
             <div class="sort-search">
                 <select ng-model="selectType" ng-change="chooseType(selectType)" class="form-control">
-                    <option selected>Tất cả xe</option>
-                    <option>4 Chỗ</option>
-                    <option>7 Chỗ</option>
+                    <option selected>All vehicles</option>
+                    <option>4 Seats</option>
+                    <option>7 Seats</option>
                 </select>
             </div>
         </div>
         <div class="col-md-5">
             <div class="add-new-item">
                 <button type="button" class="btn btn-primary pull-right" ng-click="activeForm = 1"><i
-                        class="glyphicon glyphicon-plus"></i> Thêm mới
+                        class="glyphicon glyphicon-plus"></i> Add new
                 </button>
                 <button class="btn btn-primary pull-right"><a style="color: white;" download="data.xls" onclick="return ExcellentExport.excel(this, 'datatable', 'Sheet Name Here');">Export to Excel</a></button>
             </div>
@@ -45,16 +45,16 @@
                 <table class="table table-post" id="datatable">
                     <thead>
                     <tr>
-                        <th>STT</th>
-                        <th>Loại xe</th>
-                        <th>Mầu</th>
-                        <th>Số chỗ</th>
-                        <th>Km đầu tiên</th>
-                        <th>Giá Km đầu tiên</th>
-                        <th>Km thứ hai</th>
-                        <th>Giá KM thứ 2</th>
-                        <th>KM Cuối</th>
-                        <th>Giá KM cuối</th>
+                        <th>#</th>
+                        <th>Car model</th>
+                        <th>Color</th>
+                        <th>Seats</th>
+                        <th>First distance</th>
+                        <th>First distance price</th>
+                        <th>Middle distance</th>
+                        <th>Middle distance price</th>
+                        <th>Last distance</th>
+                        <th>Last distance price</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -64,12 +64,12 @@
                         <td>{{data.carMarker}}</td>
                         <td>{{data.color}}</td>
                         <td>{{data.seatNum}}</td>
-                        <td> < {{data.firstKm}} Km</td>
-                        <td>{{data.firstPrice}} VNĐ</td>
-                        <td>{{data.firstKm}} Km đến < {{data.middleKm}} Km</td>
-                        <td>{{data.middlePrice}} VNĐ</td>
-                        <td>Lớn hơn {{data.middleKm}} Km</td>
-                        <td>{{data.lastPrice}} VNĐ</td>
+                        <td> &lt; {{data.firstKm}} Km</td>
+                        <td>$ {{data.firstPrice}}</td>
+                        <td>{{data.firstKm}} to {{data.middleKm}} Km</td>
+                        <td>$ {{data.middlePrice}}</td>
+			<td> &gt; {{data.middleKm}} Km</td>
+                        <td>$ {{data.lastPrice}}</td>
                     </tr>
                     </tbody>
                 </table>

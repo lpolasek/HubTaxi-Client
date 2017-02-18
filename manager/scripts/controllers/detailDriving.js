@@ -152,12 +152,12 @@ angular.module('itaxiManagerApp')
 
             itemSave.save(function (err, result) {
                 if (!err) {
-                    toastr.info('Cập nhật thông tin lái xe thành công!');
+                    toastr.info('Driver update success!');
                     appDataStore.Drivings.update(result[0]);
                     $scope.enabale = true;
                     $scope.driver = result[0];
                 } else {
-                    toastr.error('Lỗi cập nhật thông tin lái xe');
+                    toastr.error('Error updating driver');
                 }
             })
         };

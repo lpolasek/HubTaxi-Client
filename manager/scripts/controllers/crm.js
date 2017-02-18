@@ -20,99 +20,99 @@ angular.module('itaxiManagerApp')
 
         $scope.messageGroup = [
             {
-                name: 'Hoàng Văn Lợi',
-                title: 'Tiêu đề của bức thư',
-                detail: 'Nội dung trong bức thư dài nhất mà tôi từng thấy',
+                name: 'John Doe',
+                title: 'Tittle of the message',
+                detail: 'Content of the longest message I've ever seen',
                 time: '21:30'
             },
             {
-                name: 'Hoàng Văn Lợi',
-                title: 'Tiêu đề của bức thư',
-                detail: 'Nội dung trong bức thư dài nhất mà tôi từng thấy',
+                name: 'John Doe',
+                title: 'Tittle of the message',
+                detail: 'Content of the longest message I've ever seen',
                 time: '21:30'
             },
             {
-                name: 'Hoàng Văn Lợi',
-                title: 'Tiêu đề của bức thư',
-                detail: 'Nội dung trong bức thư dài nhất mà tôi từng thấy',
+                name: 'John Doe',
+                title: 'Tittle of the message',
+                detail: 'Content of the longest message I've ever seen',
                 time: '21:30'
             },
             {
-                name: 'Hoàng Văn Lợi',
-                title: 'Tiêu đề của bức thư',
-                detail: 'Nội dung trong bức thư dài nhất mà tôi từng thấy',
+                name: 'John Doe',
+                title: 'Tittle of the message',
+                detail: 'Content of the longest message I've ever seen',
                 time: '21:30'
             },
             {
-                name: 'Hoàng Văn Lợi',
-                title: 'Tiêu đề của bức thư',
-                detail: 'Nội dung trong bức thư dài nhất mà tôi từng thấy',
+                name: 'John Doe',
+                title: 'Tittle of the message',
+                detail: 'Content of the longest message I've ever seen',
                 time: '21:30'
             },
             {
-                name: 'Hoàng Văn Lợi',
-                title: 'Tiêu đề của bức thư',
-                detail: 'Nội dung trong bức thư dài nhất mà tôi từng thấy',
+                name: 'John Doe',
+                title: 'Tittle of the message',
+                detail: 'Content of the longest message I've ever seen',
                 time: '21:30'
             },
             {
-                name: 'Hoàng Văn Lợi',
-                title: 'Tiêu đề của bức thư',
-                detail: 'Nội dung trong bức thư dài nhất mà tôi từng thấy',
+                name: 'John Doe',
+                title: 'Tittle of the message',
+                detail: 'Content of the longest message I've ever seen',
                 time: '21:30'
             },
             {
-                name: 'Hoàng Văn Lợi',
-                title: 'Tiêu đề của bức thư',
-                detail: 'Nội dung trong bức thư dài nhất mà tôi từng thấy',
+                name: 'John Doe',
+                title: 'Tittle of the message',
+                detail: 'Content of the longest message I've ever seen',
                 time: '21:30'
             },
             {
-                name: 'Hoàng Văn Lợi',
-                title: 'Tiêu đề của bức thư',
-                detail: 'Nội dung trong bức thư dài nhất mà tôi từng thấy',
+                name: 'John Doe',
+                title: 'Tittle of the message',
+                detail: 'Content of the longest message I've ever seen',
                 time: '21:30'
             },
             {
-                name: 'Hoàng Văn Lợi',
-                title: 'Tiêu đề của bức thư',
-                detail: 'Nội dung trong bức thư dài nhất mà tôi từng thấy',
+                name: 'John Doe',
+                title: 'Tittle of the message',
+                detail: 'Content of the longest message I've ever seen',
                 time: '21:30'
             },
             {
-                name: 'Hoàng Văn Lợi',
-                title: 'Tiêu đề của bức thư',
-                detail: 'Nội dung trong bức thư dài nhất mà tôi từng thấy',
+                name: 'John Doe',
+                title: 'Tittle of the message',
+                detail: 'Content of the longest message I've ever seen',
                 time: '21:30'
             },
             {
-                name: 'Hoàng Văn Lợi',
-                title: 'Tiêu đề của bức thư',
-                detail: 'Nội dung trong bức thư dài nhất mà tôi từng thấy',
+                name: 'John Doe',
+                title: 'Tittle of the message',
+                detail: 'Content of the longest message I've ever seen',
                 time: '21:30'
             },
             {
-                name: 'Hoàng Văn Lợi',
-                title: 'Tiêu đề của bức thư',
-                detail: 'Nội dung trong bức thư dài nhất mà tôi từng thấy',
+                name: 'John Doe',
+                title: 'Tittle of the message',
+                detail: 'Content of the longest message I've ever seen',
                 time: '21:30'
             },
             {
-                name: 'Hoàng Văn Lợi',
-                title: 'Tiêu đề của bức thư',
-                detail: 'Nội dung trong bức thư dài nhất mà tôi từng thấy',
+                name: 'John Doe',
+                title: 'Tittle of the message',
+                detail: 'Content of the longest message I've ever seen',
                 time: '21:30'
             },
             {
-                name: 'Hoàng Văn Lợi',
-                title: 'Tiêu đề của bức thư',
-                detail: 'Nội dung trong bức thư dài nhất mà tôi từng thấy',
+                name: 'John Doe',
+                title: 'Tittle of the message',
+                detail: 'Content of the longest message I've ever seen',
                 time: '21:30'
             },
             {
-                name: 'Hoàng Văn Lợi',
-                title: 'Tiêu đề của bức thư',
-                detail: 'Nội dung trong bức thư dài nhất mà tôi từng thấy',
+                name: 'John Doe',
+                title: 'Tittle of the message',
+                detail: 'Content of the longest message I've ever seen',
                 time: '21:30'
             }
         ];

@@ -17,10 +17,10 @@ angular.module('itaxiManagerApp')
         };
 
         $scope.options = {
-            buttonDefaultText: 'Đăng nhập',
-            buttonSubmittingText: 'Đang đăng nhập',
-            buttonSuccessText: 'Đăng nhập thành công',
-            buttonErrorText: 'Đăng nhập sai',
+            buttonDefaultText: 'Login',
+            buttonSubmittingText: 'Logging in',
+            buttonSuccessText: 'Successfully logged',
+            buttonErrorText: 'Login error',
             buttonDefaultClass: 'btn-default',
             buttonSubmittingClass: 'btn-info',
             buttonSuccessClass: 'btn-success'
@@ -31,14 +31,14 @@ angular.module('itaxiManagerApp')
         $scope.loginFunc = function(data) {
 
             if (data.user == null || data.pass == null) {
-                $scope.loginErr = 'Vui lòng nhập đầy đủ';
+                $scope.loginErr = 'Please complete all fields';
                 $scope.result = 'error';
             } else {
                 $scope.loginProcess = true;
                 $auth.login(data.user, data.pass, function (err, resp) {
                     $scope.loginProcess = false;
                     if (err) {
-                        $scope.loginErr = 'Tài khoản hay mật khẩu không đúng!';
+                        $scope.loginErr = 'Username or password incorrect!';
                         $scope.data.pass = null;
                         $scope.result = 'error';
                     } else {

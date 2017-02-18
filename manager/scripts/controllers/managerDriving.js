@@ -36,25 +36,25 @@ angular.module('itaxiManagerApp')
                 $scope.checkCarType = true;
                 console.log('OK click');
             };
-            $scope.selectSearchSeatNum = 'Tất cả';
-            $scope.selectSearch = 'Tìm kiếm Kiếm theo tên';
-            $scope.myCheckCar = 'Tất cả xe';
+            $scope.selectSearchSeatNum = 'All';
+            $scope.selectSearch = 'Search by name';
+            $scope.myCheckCar = 'All vehicles';
 
 
             $scope.select = function (data) {
-                if (data == 'Tìm kiếm theo Xe') {
-                    $scope.myCheckCar = 'Tất cả xe';
+                if (data == 'Search by vehicle') {
+                    $scope.myCheckCar = 'All vehicles';
                     $scope.checkCarType = true;
                     $scope.checkCarTypeSeat = false;
                     $scope.listDriving = dataDriving;
                 }
-                if (data == 'Tìm kiếm Kiếm theo số chỗ') {
-                    $scope.selectSearchSeatNum = 'Tất cả';
+                if (data == 'Search by seats') {
+                    $scope.selectSearchSeatNum = 'All';
                     $scope.checkCarTypeSeat = true;
                     $scope.checkCarType = false;
                     $scope.listDriving = dataDriving;
                 }
-                if (data == 'Tìm kiếm Kiếm theo tên') {
+                if (data == 'Search by name') {
                     $scope.listDriving = dataDriving;
                     $scope.checkCarType = false;
                     $scope.checkCarTypeSeat = false;
@@ -73,13 +73,13 @@ angular.module('itaxiManagerApp')
                 }
             }
             $scope.selectSeat = function (seat) {
-                if (seat == '7 Chỗ') {
+                if (seat == '7 Seats') {
                     $scope.listDriving = [];
                     $scope.searchData(7, dataDriving);
-                } else if (seat == '4 Chỗ') {
+                } else if (seat == '4 Seats') {
                     $scope.listDriving = [];
                     $scope.searchData(4, dataDriving);
-                } else if (seat == 'Tất cả') {
+                } else if (seat == 'All') {
                     $scope.listDriving = dataDriving;
                 }
             };
@@ -136,29 +136,29 @@ angular.module('itaxiManagerApp')
 
                 itemData.save(function (err, resp) {
                     if (!err) {
-                        toastr.success('Thêm mới thành công!');
+                        toastr.success('Success adding new!');
                         $scope.listDriving.unshift(itemData);
                         appDataStore.Drivings.add(itemData);
                         $scope.activeForm = 0;
                     } else {
-                        toastr.error('Lỗi thêm mới');
+                        toastr.error('Failed to add new');
                     }
                 })
             };
 
             $scope.deleteDriving = function (item, index) {
 
-                if (window.confirm('Bạn có muốn xóa tài xế : ' + item.username + ' hay không?')) {
+                if (window.confirm('Do you want to delete the driver ' + item.username + ' ?')) {
                     var destroyItem = item;
 
                     destroyItem.isDestroy = true;
                     destroyItem.save(function (err, result) {
                         if (!err) {
-                            toastr.success('Xóa lái xe thành công!');
+                            toastr.success('Success deleting driver!');
                             $scope.listDriving.splice(index, 1);
                             appDataStore.Drivings.remove(item);
                         } else {
-                            toastr.error('Lỗi xóa tài khoản');
+                            toastr.error('Failed to delete driver!');
                         }
                     })
                 }

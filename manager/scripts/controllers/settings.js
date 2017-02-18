@@ -62,10 +62,10 @@ angular.module('itaxiManagerApp')
 
                 itemSave.save(function (err, result) {
                     if (!err) {
-                        toastr.info('Cập nhật Hãng thành công!');
+                        toastr.info('Company successfully updated!');
                         $scope.enabale = true;
                     } else {
-                        toastr.error('Lỗi cập nhật thông tin Hãng');
+                        toastr.error('Failed to update company');
                     }
                 });
             };

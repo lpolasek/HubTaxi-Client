@@ -7,23 +7,23 @@
 
 /**
  * @module frameworkVsoft
- * @description Parrent của @module ui.vsoft và core.vsoft
+ * @description Parent of @module ui.vsoft and core.vsoft
  */
 
 angular.module('framework.vsoft', ['ui.vsoft', 'core.vsoft'])
 /**
  * @memberOf frameworkVsoft
  * @function appConfig
- * @description Chứa các thuộc tính cấu hình hệ thống !
- * @param {String} deviceId ID của device
- * @param {String} apiHost Địa chỉ của server REST API
- * @param {String} mediaHost Địa chỉ server chứa media
+ * @description Contains the system configuration properties
+ * @param {String} deviceId ID of device
+ * @param {String} apiHost Address of REST API server
+ * @param {String} mediaHost Address of media server
  */
     .constant('appConfig', {
         deviceId: (window.device) ? device.uuid.toLowerCase() : 'what.do.namehihi????',
         defaultPass: 'defaultPassword',
         name: 'iTaxi',
-        apiHost: 'http://192.168.1.107:6868', // taxigo.vn:997
+        apiHost: 'http://localhost:6868', // taxigo.vn:997
         mediaHost: 'http://vsoft.vn:1235'
     });
 
@@ -71,8 +71,8 @@ angular.module('ui.vsoft.tooltip', [])
             /**
              * @toc UI.$tooltip.open
              * @function open
-             * @param {String} content Nội dung tooltip
-             * @param {Number} timeout Thời gian tắt tooltip
+             * @param {String} content Tooltip content
+             * @param {Number} timeout Tooltip timeout
              */
             open: function (content, timeout) {
                 var me = this;

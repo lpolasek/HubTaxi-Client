@@ -13,10 +13,10 @@ angular.module('itaxiManagerApp')
             };
 
             $scope.options = {
-                buttonDefaultText: 'Gửi tin nhắn',
-                buttonSubmittingText: 'Đang Gửi',
-                buttonSuccessText: 'Gửi thành công',
-                buttonErrorText: 'Nhập Email',
+                buttonDefaultText: 'Send message',
+                buttonSubmittingText: 'Sending',
+                buttonSuccessText: 'Submit success',
+                buttonErrorText: 'Enter your Email',
                 buttonDefaultClass: 'btn-default',
                 buttonSubmittingClass: 'btn-info',
                 buttonSuccessClass: 'btn-success'

@@ -1,13 +1,13 @@
 <!------
-    Hiển thị lịch sử lộ trình
-------->
+    Shows route history
+------>
 
 <div class="title-content-post">
     <ol class="breadcrumb pull-left">
         <li><a href="#">{{getApp.name}}</a></li>
     </ol>
     <div class="pull-right">
-        <button type="button" class="btn btn-default" ng-click="back()"><i class="glyphicon glyphicon-chevron-left"></i> Quay lại</button>
+        <button type="button" class="btn btn-default" ng-click="back()"><i class="glyphicon glyphicon-chevron-left"></i> Back</button>
     </div>
 </div>
 <div class="content-post">
@@ -15,23 +15,23 @@
         <div class="col-md-3">
             <div class="input-group input-search">
                 <i class="fa fa-search"></i>
-                <input type="text" class="form-control" placeholder="Tìm kiếm">
+                <input type="text" class="form-control" placeholder="Search">
             </div>
 
         </div>
         <div class="col-md-3">
             <div class="sort-search">
                 <select class="form-control">
-                    <option>Tìm kiếm theo ngày</option>
-                    <option>Tìm kiếm theo vần</option>
-                    <option>Tìm kiếm theo trạng thái</option>
+                    <option>Search by date</option>
+                    <option>Search alphabetically</option>
+                    <option>Search by state</option>
                 </select>
             </div>
         </div>
         <div class="col-md-5">
             <div class="add-new-item">
                 <button type="button" class="btn btn-primary pull-right"><i
-                        class="glyphicon glyphicon-plus"></i> Thêm mới
+                        class="glyphicon glyphicon-plus"></i> Add new
                 </button>
             </div>
         </div>
@@ -49,11 +49,11 @@
                 <table class="table table-post">
                     <thead>
                     <tr>
-                        <th>STT</th>
-                        <th align="center">Khách hàng</th>
-                        <th>Lái xe</th>
-                        <th>Biển số</th>
-                        <th>Trạng thái</th>
+                        <th>#</th>
+                        <th align="center">Customer</th>
+                        <th>Driver Name</th>
+                        <th>Driver User</th>
+                        <th>Status</th>
                     </tr>
                     </thead>
                     <tbody>

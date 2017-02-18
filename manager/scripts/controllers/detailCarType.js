@@ -35,10 +35,10 @@ angular.module('itaxiManagerApp')
             var itemSave = new $baseModel('driverTypes', item);
             itemSave.save(function (err, result) {
                 if (!err) {
-                    toastr.info('Cập nhật thông tin xe thành công!');
+                    toastr.info('Car successfully updated!');
                     appDataStore.DriverTypes.update(item);
                 } else {
-                    toastr.error('Lỗi cập nhật thông tin xe');
+                    toastr.error('Failed to update car');
                 }
             })
         }
