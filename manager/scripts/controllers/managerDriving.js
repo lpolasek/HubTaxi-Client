@@ -67,7 +67,7 @@ angular.module('itaxiManagerApp')
                 $scope.listDriving = [];
 
                 for (var i = 0; i < dataDriving.length; i++) {
-                    if (dataDriving[i].type._id == data._id) {
+                    if ((! data) || (dataDriving[i].type._id == data._id)) {
                         $scope.listDriving.push(dataDriving[i]);
                     }
                 }
